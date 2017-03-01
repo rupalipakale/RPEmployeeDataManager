@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11758" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Department" representedClassName="Department" syncable="YES" codeGenerationType="class">
+        <attribute name="deptdetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deptid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="empid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="empdeptrelation" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone_no" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="empdeptrelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="newRelationship" inverseEntity="Department" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="-333" positionY="78" width="128" height="148"/>
+        <element name="Department" positionX="-54" positionY="36" width="128" height="118"/>
+    </elements>
+</model>
